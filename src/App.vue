@@ -1,16 +1,22 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import { ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import PropsTest from './components/PropsTest.vue'
 
-defineEmits(['click','changeName' ])
+const msg = ref('人帅多金180')
+
+const day = () => {
+  msg.value = '人傻钱多'
+  console.log(1)
+}
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <PropsTest />
+  <PropsTest :msg="msg" :msg2="msg" @some-event="day" />
 </template>
 
 <style>

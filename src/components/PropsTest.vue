@@ -2,19 +2,24 @@
   <p>{{ student.name }}</p>
   <p>{{ student.age }}</p>
   <p>{{ student.sex }}</p>
-  <div @click="changeName">改变名字</div>
+  <p>{{ props.msg }}</p>
+  <p>{{ props.msg2 }}</p>
+  <div @click="$emit('someEvent')">改变名字</div>
+  <button @click="count += count">{{ count }}</button>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { ref,reactive } from 'vue'
+
+const count = ref(2)
+const props = defineProps<{
+  msg: string,
+  msg2: String
+}>()
 
 const student = reactive({
-  name: '李华',
+  name: '',
   age: 18,
   sex: '男'
 })
-
-const changeName = () => {
-  student.name = '小花'
-} 
 </script>
