@@ -3,6 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref, provide } from 'vue'
 import { useMouse } from './mouse.js'
+import 'animate.css'
 import HelloWorld from './components/HelloWorld.vue'
 import PropsTest from './components/PropsTest.vue'
 
@@ -21,7 +22,7 @@ const day = () => {
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <img class="animate__animated animate__backInDown" alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   <PropsTest :msg="msg" :msg2="msg" @some-event="day" />
   <div>{{ x }}, {{ y }}</div>
