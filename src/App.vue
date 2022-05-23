@@ -1,31 +1,31 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { ref, provide } from 'vue'
-import { useMouse } from './mouse.js'
+// import { useMouse } from './mouse.js'
 import 'animate.css'
-import HelloWorld from './components/HelloWorld.vue'
-import PropsTest from './components/PropsTest.vue'
+import animateTest from './components/animateTest.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import PropsTest from './components/PropsTest.vue'
 
-const msg = ref('人帅多金180')
+// const msg = ref('人帅多金180')
 
-const { x,y } = useMouse()
+// // const { x,y } = useMouse()
 
-provide('key', msg)
+// provide('key', msg)
 
-const day = () => {
-  msg.value = '人傻钱多'
-  console.log(1)
-}
+// const day = () => {
+//   msg.value = '人傻钱多'
+// }
 
 
 </script>
 
 <template>
-  <img class="animate__animated animate__backInDown" alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <PropsTest :msg="msg" :msg2="msg" @some-event="day" />
-  <div>{{ x }}, {{ y }}</div>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <PropsTest :msg="msg" :msg2="msg" @some-event="day" /> -->
+  <!-- <div>{{ x }}, {{ y }}</div> -->
+  <animateTest />
   <EventCheck />
 </template>
 
