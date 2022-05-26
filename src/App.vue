@@ -4,5 +4,5 @@
 </template>
 
 <script lang="ts" setup>
-import watch from './views/watch.vue'
+import watch from './views/vue3-core/watch.vue'
 </script>
