@@ -12,8 +12,8 @@
       age: 21,
       sex: '男'
     }
-  })
-  const paste = readonly(copy)
+  }) //copy可以修改
+  const paste = readonly(copy)  //paste不可以修改
   
   const change = () => {
     copy.count++
@@ -22,8 +22,8 @@
     console.log(copy)
   console.log(paste)
   }
-  
-  const shallowPaste = shallowReadonly(copy)
+
+  const shallowPaste = shallowReadonly(copy)  // 浅只读 第一层不能修改 其他的都能修改
   const shallowChange = () => {
     shallowPaste.count++
     shallowPaste.man.age = 22 //shallowReadOnly 只有第一层不能修改 其他的可以修改

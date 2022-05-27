@@ -3,11 +3,9 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, reactive, watchEffect } from 'vue'
+  import { ref, watchEffect } from 'vue'
 
   const count = ref(1)
-
-  const list = reactive({})
 
   const handleClickCheck = () => {
     count.value++
@@ -17,7 +15,7 @@
     console.log('count的数值是',count.value)
     onInvalidate(() => {
       console.log('我出来喽')
-    })
+    }) //页面加载完以后不会执行 onInvalidate 只会执行console.log 这是watchEffect 的副作用
 
   })  //watchEffect 在count发生改变是会执行
 
