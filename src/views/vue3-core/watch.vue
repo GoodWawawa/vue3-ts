@@ -14,7 +14,7 @@ import { ref, reactive, watch } from 'vue'
   watch(count, (count, prevCount) => {
     console.log(count)
     console.log(prevCount)
-  })  // 和watchEffect不同的是 watch 是懒侦听 只有他所监听的东西发生改变时才会执行
+  })  // 和watchEffect不同的是 watch 是懒侦听 只有他所监听的东西发生改变时才会执行 加载页面不会执行
 
   //侦听getter函数
   const state = reactive({ count: 0 })
