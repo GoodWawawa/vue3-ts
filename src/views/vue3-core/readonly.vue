@@ -1,5 +1,4 @@
 <template>
-
   <button @click="change">点击</button>
 </template>
 
@@ -17,7 +16,7 @@
   
   const change = () => {
     copy.count++
-    paste.count++ 
+    paste.count++   //会报错
     paste.man.age = 22 //readonly 所有的都不能修改
     console.log(copy)
   console.log(paste)

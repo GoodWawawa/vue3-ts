@@ -1,8 +1,11 @@
 <template>
   <p>hello</p>
-  <watchEffect />
+  <toRefs />
 </template>
 
-<script lang="ts" setup> 
-import watchEffect from './views/vue3-core/watchEffect.vue'
+<script lang="ts" setup>
+  import { ref } from 'vue'
+  import toRefs from './views/vue3-tool/toRefs.vue'
+
+  const newName = ref('麦林炮手')
 </script>
